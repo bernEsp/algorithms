@@ -71,4 +71,12 @@ class PerfectPowerTest < Minitest::Test
   def test_return_all_divisors_of_360
     assert_equal [1,2,3,4,5,6,8,9,10,12,15,18,20, 24,30,36,40,45,60,72,90,120,180,360].sort, @perfect_power.divisors(360)
   end
+
+  def test_total_of_divisors_of_2
+    assert_equal 2, @perfect_power.total_divisors(2)
+  end
+
+  def test_total_of_divisors_of_360
+    assert_equal 24, @perfect_power.total_divisors(360)
+  end
 end

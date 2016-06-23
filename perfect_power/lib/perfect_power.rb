@@ -33,6 +33,10 @@ class PerfectPower
     return nil
   end
 
+  def total_divisors(n)
+    _total_divisors(n)
+  end
+
   private
   def perfect_powers(divisors, n)
     max_k = Math.log2(n)
@@ -64,6 +68,16 @@ class PerfectPower
       end
     end
     result
+  end
+
+  def _total_divisors(n)
+    # to know all divisors, we should multiply all exponents increase 1
+    # exponents 3 and 2
+    # (3+1) * (2+1)
+    primes = Prime.first 10
+    factors = factorization(n, primes)
+    factor_powers = factor_powers(factors)
+    factor_powers.values.inject(1) {|sum, p| sum * (p + 1)}
   end
 
   def _divisors(n)
