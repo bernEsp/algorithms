@@ -21,7 +21,7 @@ isPP(9) => [3,2]
 isPP(5) => nil
 ```
 
-#### releated topics
+#### related topics
 
 * Prime Factorization
 * Greatest Common Divisor (GCD)
